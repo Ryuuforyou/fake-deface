@@ -2,23 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hacked By Vaviona</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Hacked</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: red;
+      font-family: "Courier New", monospace;
+      text-align: center;
+      animation: bgFlash 1s infinite alternate;
+    }
+
+    h1 {
+      color: lime;
+      font-size: 2.5em;
+      text-shadow: 0 0 20px red, 0 0 10px white;
+      animation: blink 1s infinite;
+    }
+
+    p {
+      color: white;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .fire-text {
+      color: red;
+      font-weight: bold;
+      text-shadow:
+        0 0 5px orange,
+        0 0 10px red,
+        0 0 20px darkred,
+        0 0 30px red;
+      animation: flicker 0.2s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      40% { opacity: 0.8; }
+      60% { opacity: 0.5; }
+    }
+
+    @keyframes bgFlash {
+      from { background-color: black; }
+      to { background-color: #330000; }
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.8em;
+      color: gray;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="hacker.jpg" alt="hacker" class="hacker-img">
-    <h1>Hacked By Peju100 and Ryuu</h1>
-    <p>Hi I'm Ryuu, I Have Hacked Your Site,</p>
-    <p class="note">"Dear Admins"</p>
-    <p>Upgrade your website security so it's not easy for me to hack it lol</p>
-    <p class="footer">Hacked By Peju100</p>
-  </div>
+  <h1><span class="fire-text">Hacked By Peju100 and Ryuu</span></h1>
+  <p>Hi I'm Ryuu, I have hacked your site.</p>
+  <p><strong class="fire-text">Dear Admins:</strong></p>
+  <p>Upgrade your website security so it's not easy for me to hack it, lol.</p>
+  <p class="fire-text">Hacked By Peju100</p>
 
   <footer>
-    <p>© kaliforkontol | memekexploit</p>
+    &copy; kaliforkontol | memekexploit
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
