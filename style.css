@@ -4,11 +4,13 @@ body {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   padding: 50px;
+  overflow: hidden;
 }
 
 .container {
   max-width: 600px;
   margin: auto;
+  position: relative;
 }
 
 .hacker-img {
@@ -17,26 +19,64 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   margin-bottom: 20px;
-  box-shadow: 0 0 15px lime;
+  box-shadow: 0 0 15px red;
+  animation: blink 1s infinite;
 }
 
 h1 {
-  color: lime;
-  text-shadow: 0 0 5px lime;
+  color: red;
+  text-shadow: 0 0 5px red;
+  animation: glitch 1s infinite;
 }
 
 .note {
   color: red;
   font-weight: bold;
+  animation: blink 1s step-start infinite;
 }
 
 .footer {
   color: red;
   margin-top: 30px;
+  animation: glitch 1.5s infinite;
 }
 
 footer {
   margin-top: 50px;
   font-size: 14px;
   color: gray;
+}
+
+/* Blink animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Glitch animation */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px red, -2px -2px blue;
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: -2px -2px red, 2px 2px blue;
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    text-shadow: 2px -2px red, -2px 2px blue;
+    transform: translate(2px, -2px);
+  }
+  60% {
+    text-shadow: -1px 1px red, 1px -1px blue;
+    transform: translate(1px, 1px);
+  }
+  80% {
+    text-shadow: 2px 2px red, -2px -2px blue;
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    text-shadow: none;
+    transform: translate(0);
+  }
 }
